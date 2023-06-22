@@ -1147,13 +1147,7 @@ contract ToniToken is ERC20('Daytona.Finance', 'TONI') {
         }
     }
 
-    function _writeCheckpoint(
-        address delegatee,
-        uint32 nCheckpoints,
-        uint256 oldVotes,
-        uint256 newVotes
-    )
-        internal
+    function _writeCheckpoint(address delegatee, uint32 nCheckpoints, uint256 oldVotes, uint256 newVotes) internal
     {
         uint32 blockNumber = safe32(block.number, "TONI::_writeCheckpoint: block number exceeds 32 bits");
 
@@ -1365,7 +1359,6 @@ contract MasterChef is Ownable, ReentrancyGuard {
 
     // Deposit LP tokens to MasterChef for TONI allocation.
     function depositReferral(uint256 _pid, uint256 _amount, address referral) public nonReentrant {
-        require(msg.sender != referral, "dev: dont reffer yourself");
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         updatePool(_pid);
@@ -1450,3 +1443,4 @@ contract MasterChef is Ownable, ReentrancyGuard {
     }
 }
 
+        
