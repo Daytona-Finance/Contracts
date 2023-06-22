@@ -1450,4 +1450,3 @@ contract MasterChef is Ownable, ReentrancyGuard {
     }
 }
 
-
