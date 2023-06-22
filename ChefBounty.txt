@@ -1,7 +1,7 @@
 We have a $1,000 USDC bounty up for grabs for anyone who can get out master chef contract verified.
 
 Our contracts were deployed using remix IDE and a deploy script.
-When we tried to verify the contracts after deployment we spend hours trying to get them to take. 
+When we tried to verify the contracts after deployment we spent hours trying to get them to take. 
 Eventually we were able to get the ERC20 token to take but never the masterchef.
 
 I have now been made aware that you need to verify the contracts using the etherscan pluggin with hardhat.
